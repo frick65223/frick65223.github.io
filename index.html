@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>陳建智 Chien-Chih Chen</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background: #f5f6fa;
+      color: #2d3436;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2980b9 100%);
+      color: #fff;
+      padding: 60px 24px 48px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.4rem; letter-spacing: 2px; }
+    header .subtitle { font-size: 1.05rem; margin-top: 8px; opacity: .88; }
+    header .email { margin-top: 12px; font-size: .95rem; opacity: .8; }
+    header .email a { color: #a8d8f0; text-decoration: none; }
+    header .email a:hover { text-decoration: underline; }
+
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      gap: 0;
+    }
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: #1e3a5f;
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 600;
+      transition: background .2s, color .2s;
+    }
+    nav ul li a:hover { background: #1e3a5f; color: #fff; }
+
+    main {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 36px 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      color: #1e3a5f;
+      border-left: 4px solid #2980b9;
+      padding-left: 14px;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      color: #2980b9;
+      margin: 20px 0 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .93rem;
+    }
+    th {
+      background: #1e3a5f;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #ecf0f1;
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #f8f9fa; }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .tag {
+      background: #e8f4fd;
+      color: #1e3a5f;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: .88rem;
+      font-weight: 600;
+    }
+
+    .paper-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .paper-list li {
+      padding: 14px 16px;
+      border-left: 3px solid #2980b9;
+      background: #f8fbff;
+      border-radius: 0 8px 8px 0;
+      font-size: .88rem;
+      line-height: 1.65;
+    }
+    .paper-list li a { color: #2980b9; word-break: break-all; }
+
+    .award-box {
+      background: #fffbea;
+      border: 1px solid #f1c40f;
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: .93rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      color: #888;
+      font-size: .85rem;
+    }
+
+    @media (max-width: 640px) {
+      header h1 { font-size: 1.6rem; }
+      section { padding: 24px 18px; }
+      nav ul li a { padding: 10px 12px; font-size: .82rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>陳建智 &nbsp; Chien-Chih Chen</h1>
+  <p class="subtitle">助理教授，國立勤益科技大學資訊管理系<br>
+    Assistant Professor, Department of Information Management, NCUT</p>
+  <p class="email">✉ <a href="mailto:frick@ncut.edu.tw">frick@ncut.edu.tw</a></p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#edu">學歷</a></li>
+    <li><a href="#exp">經歷</a></li>
+    <li><a href="#research">研究專長</a></li>
+    <li><a href="#output">研究成果</a></li>
+    <li><a href="#papers">期刊論文</a></li>
+    <li><a href="#projects">研究計畫</a></li>
+    <li><a href="#awards">獎項</a></li>
+    <li><a href="#students">指導學生</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- 學歷 -->
+  <section id="edu">
+    <h2>一、學歷 Education</h2>
+    <table>
+      <thead><tr><th>學校</th><th>學系</th><th>學位</th><th>年度</th></tr></thead>
+      <tbody>
+        <tr><td>國立成功大學</td><td>工業管理科學系</td><td>學士</td><td>1994–1998</td></tr>
+        <tr><td>國立成功大學</td><td>工業與資訊管理研究所</td><td>碩士</td><td>2004–2006</td></tr>
+        <tr><td>國立成功大學</td><td>工業與資訊管理研究所</td><td>博士</td><td>2007–2010</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 經歷 -->
+  <section id="exp">
+    <h2>二、經歷 Experience</h2>
+
+    <h3>A. 學術經歷 Academic Positions</h3>
+    <table>
+      <thead><tr><th>時間</th><th>職位</th></tr></thead>
+      <tbody>
+        <tr><td>2024/02 ~ 至今</td><td>國立勤益科技大學　助理教授</td></tr>
+        <tr><td>2020/08 ~ 2021/07</td><td>國立成功大學　博士後研究員</td></tr>
+        <tr><td>2019/11 ~ 2020/07</td><td>高雄醫學大學　博士後研究員</td></tr>
+        <tr><td>2016/08 ~ 2019/07</td><td>成功大學 / 高雄科大　博士後研究員 / 助理研究員</td></tr>
+        <tr><td>2013/08 ~ 2014/07</td><td>國立成功大學　博士後研究員</td></tr>
+      </tbody>
+    </table>
+
+    <h3>B. 業界經歷 Industry Experience</h3>
+    <table>
+      <thead><tr><th>時間</th><th>職位</th></tr></thead>
+      <tbody>
+        <tr><td>2022/10 ~ 2024/01</td><td>華泰電子　AI 資深工程師</td></tr>
+        <tr><td>2012/07 ~ 2012/12</td><td>群創電子　外包產品管理師</td></tr>
+        <tr><td>2007/09 ~ 2008/08</td><td>燁輝鋼鐵　生管工程師</td></tr>
+        <tr><td>2006/01 ~ 2006/09</td><td>偉同科技　企劃股長</td></tr>
+        <tr><td>2004/08 ~ 2005/05</td><td>日月光半導體　工業工程師</td></tr>
+        <tr><td>2003/03 ~ 2003/12</td><td>偉同科技　生管工程師</td></tr>
+        <tr><td>2002/06 ~ 2003/03</td><td>彥陽科技 / 茂綸（股）　業務工程師</td></tr>
+        <tr><td>2000/10 ~ 2001/12</td><td>大成長城　儲備幹部</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 研究專長 -->
+  <section id="research">
+    <h2>三、研究領域及專長 Research Areas &amp; Expertise</h2>
+    <div class="tag-list">
+      <span class="tag">大數據分析 Big Data Analytics</span>
+      <span class="tag">小樣本學習 Small Sample Learning</span>
+      <span class="tag">人工智慧演算法 AI Algorithms</span>
+      <span class="tag">機器學習 Machine Learning</span>
+      <span class="tag">啟發式最佳化 Metaheuristic Optimization</span>
+    </div>
+  </section>
+
+  <!-- 研究成果統計 -->
+  <section id="output">
+    <h2>四、研究成果統計 Research Output Summary</h2>
+    <table>
+      <thead><tr><th>領域</th><th>期刊</th><th>篇數</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="6">資訊</td><td>Decision Support Systems（科技部認列頂刊）</td><td>1</td></tr>
+        <tr><td>Neurocomputing（Q1）</td><td>2</td></tr>
+        <tr><td>Soft Computing（Q2）</td><td>1</td></tr>
+        <tr><td>Cybernetics and Systems（Q2）</td><td>1</td></tr>
+        <tr><td>Journal of Information Science and Engineering（Q2~Q4）</td><td>1</td></tr>
+        <tr><td>Sensors and Materials（Q4）</td><td>4</td></tr>
+        <tr><td rowspan="3">作業研究</td><td>Omega（科技部認列頂刊）</td><td>1</td></tr>
+        <tr><td>Journal of the Operational Research Society（Q2）</td><td>1</td></tr>
+        <tr><td>Expert Systems with Applications（Q1）</td><td>2</td></tr>
+        <tr><td rowspan="4">工工／製造</td><td>Computers and Industrial Engineering（Q1）</td><td>2</td></tr>
+        <tr><td>Journal of Intelligent Manufacturing（Q1）</td><td>1</td></tr>
+        <tr><td>International Journal of Production Research（Q1）</td><td>6</td></tr>
+        <tr><td>International Journal of Advanced Manufacturing Technology（Q2）</td><td>1</td></tr>
+        <tr><td rowspan="5">數學</td><td>Applied Mathematical Modelling（Q1）</td><td>2</td></tr>
+        <tr><td>Applied Mathematics and Computation（Q1）</td><td>1</td></tr>
+        <tr><td>Grey Systems: Theory and Application（Q1）</td><td>2</td></tr>
+        <tr><td>Mathematical Problems in Engineering（Q3）</td><td>1</td></tr>
+        <tr><td>Journal of Grey System（Q2~Q3）</td><td>3</td></tr>
+        <tr><td rowspan="4">其他</td><td>Automation in Construction（科技部認列土木資訊類頂刊）</td><td>1</td></tr>
+        <tr><td>Economic Computation and Economic Cybernetics Studies and Research（Q3 SSCI）</td><td>2</td></tr>
+        <tr><td>Children（Q2，醫學類）</td><td>1</td></tr>
+        <tr><td>Indoor Air（Q1）</td><td>1</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 期刊論文 -->
+  <section id="papers">
+    <h2>期刊論文 Journal Papers</h2>
+    <p style="font-size:.85rem;color:#888;margin-bottom:16px;">* 括號內 [SCI, IF = X.X] 為收錄資料庫及出版當年期刊影響係數。</p>
+    <ul class="paper-list">
+      <li>Chen, C.-C., Lin, Y.-S., Chen, H.-Y., Sun, W.-Y., &amp; Kuo, C.-J. (2025). Anomaly detection in wafer grinding using accumulated-generating-operation-processed in-process sensor data and ensemble learning: A case study. <em>Sensors and Materials</em>, 37(12), 5501–5516. [SCI, IF = 1.0]</li>
+      <li>Chang, Y.-S., Lin, C.-W., &amp; Chen, C.-C. (2025). AI-driven augmentative and alternative communication system for communication enhancement in cerebral palsy using American Sign Language recognition. <em>Sensors and Materials</em>, 37(9), 3841–3853. <a href="https://doi.org/10.18494/SAM5710" target="_blank">https://doi.org/10.18494/SAM5710</a> [SCI, IF = 1.0]</li>
+      <li>Chen, C.-C., &amp; Tsai, C.-M. (2025). Interval forecasting with grey models: A novel learning procedure for improved decision-making. <em>Grey Systems: Theory and Application</em>, 15(3), 602–619. <a href="https://doi.org/10.1108/GS-11-2024-0135" target="_blank">https://doi.org/10.1108/GS-11-2024-0135</a> [SCI, IF = 3.2]</li>
+      <li>Hsu, H.-C., Chang, C.-W., Chen, C.-C., &amp; Pan, C.-Y. (2024). Natural ventilation: Optimizing window opening size for CO₂ concentration control and thermal comfort on nonwindward facades. <em>Indoor Air</em>, 2024, Article 1435400. <a href="https://doi.org/10.1155/2024/1435400" target="_blank">https://doi.org/10.1155/2024/1435400</a> [SCI, Q1]</li>
+      <li>Chen, C.-C., Lin, Y.-S., &amp; Chen, H.-Y. (2024). Tackling class-imbalanced learning issues based on local neighborhood information and generative adversarial networks. <em>Sensors and Materials</em>, 36(11), 4835–4847. <a href="https://doi.org/10.18494/SAM5224" target="_blank">https://doi.org/10.18494/SAM5224</a> [SCI, Q4]</li>
+      <li>Chen, H.-Y., Chen, C.-C., &amp; Lin, Y.-S. (2024). Exploring the psychological mechanisms underlying exquisite poverty and consumption intentions among Generation Z. <em>Sensors and Materials</em>, 36(11), 4801–4813. <a href="https://doi.org/10.18494/SAM5203" target="_blank">https://doi.org/10.18494/SAM5203</a> [SCI, Q4]</li>
+      <li>Chung, H.-W., et al. (2023). Mobile device-based video screening for infant head lag: An exploratory study. <em>Children</em>, 10, Article 1239. <a href="https://doi.org/10.3390/children10071239" target="_blank">https://doi.org/10.3390/children10071239</a> [SCI, IF = 2.835]</li>
+      <li>Chen, Y.-Y., et al. (2023). Multi-person pose estimation using an ordinal depth-guided convolutional neural network. <em>Journal of Information Science and Engineering</em>, 39(6), 1403–1420. <a href="https://doi.org/10.6688/JISE.202311_39(6).0010" target="_blank">https://doi.org/10.6688/JISE.202311_39(6).0010</a> [SCI, IF = 1.142]</li>
+      <li>Chang, C.-J., Dai, W.-L., Li, D.-C., Chen, C.-C., &amp; Li, G. (2023). An extrapolation non-equigap grey model for operation management. <em>Journal of Grey System</em>, 35(1), 101–112. [SCI, IF = 1.3]</li>
+      <li>Chang, C.-J., Chen, C.-C., Dai, W.-L., &amp; Li, G. (2021). A new grey prediction model considering the data gap compensation. <em>Grey Systems: Theory and Application</em>, 11(4), 650–663. <a href="https://doi.org/10.1108/GS-07-2020-0087" target="_blank">https://doi.org/10.1108/GS-07-2020-0087</a> [SCI, IF = 3.321]</li>
+      <li>Chen, C.-C., et al. (2020). An envelopment learning procedure for improving prediction accuracies of grey models. <em>Computers &amp; Industrial Engineering</em>, 139, Article 106185. <a href="https://doi.org/10.1016/j.cie.2019.106185" target="_blank">https://doi.org/10.1016/j.cie.2019.106185</a> [SCI, IF = 3.518]</li>
+      <li>Hsu, H.-C., Chang, S., Chen, C.-C., &amp; Wu, I.-C. (2020). Knowledge-based system for resolving design clashes in building information models. <em>Automation in Construction</em>, 110, Article 103001. <a href="https://doi.org/10.1016/j.autcon.2019.103001" target="_blank">https://doi.org/10.1016/j.autcon.2019.103001</a> [SCI, IF = 4.313]</li>
+      <li>Lin, Y.-S., Li, D.-C., Chen, C.-C., &amp; Chen, H.-Y. (2020). Defective recognition with MTD-based non-equigap grey models. <em>Journal of Grey System</em>, 32(3), 11–20. [SCI, IF = 1.3]</li>
+      <li>Chang, C.-J., Li, D.-C., Chen, C.-C., &amp; Chen, W.-C. (2019). Extrapolation-based grey model for small-data-set forecasting. <em>Economic Computation and Economic Cybernetics Studies and Research</em>, 53(1), 171–182. <a href="https://doi.org/10.24818/18423264/53.1.19.11" target="_blank">https://doi.org/10.24818/18423264/53.1.19.11</a> [SCI, SSCI]</li>
+      <li>Li, D.-C., et al. (2019). Using virtual samples to improve learning performance for small datasets with multimodal distributions. <em>Soft Computing</em>, 23(22), 11883–11900. <a href="https://doi.org/10.1007/s00500-018-03744-z" target="_blank">https://doi.org/10.1007/s00500-018-03744-z</a> [SCI, IF = 2.367]</li>
+      <li>Chang, C.-J., et al. (2018). Latent-function-based residual discrete grey model for short-term demand forecasting. <em>Cybernetics and Systems</em>, 49(3), 170–180. <a href="https://doi.org/10.1080/01969722.2018.1448228" target="_blank">https://doi.org/10.1080/01969722.2018.1448228</a> [SCI, IF = 1.197]</li>
+      <li>Li, D.-C., et al. (2018). A new grey prediction model for the return material authorization process in the TFT-LCD industry. <em>International Journal of Advanced Manufacturing Technology</em>, 96(5–8), 2149–2160. <a href="https://doi.org/10.1007/s00170-018-1754-y" target="_blank">https://doi.org/10.1007/s00170-018-1754-y</a> [SCI, IF = 2.209]</li>
+      <li>Li, D.-C., et al. (2018). Rebuilding sample distributions for small dataset learning. <em>Decision Support Systems</em>, 105, 66–76. <a href="https://doi.org/10.1016/j.dss.2017.10.013" target="_blank">https://doi.org/10.1016/j.dss.2017.10.013</a> [SCI, IF = 3.222]</li>
+      <li>Li, D.-C., et al. (2016). The attribute-trend-similarity method to improve learning performance for small datasets. <em>International Journal of Production Research</em>, 55(7), 1898–1913. <a href="https://doi.org/10.1080/00207543.2016.1213447" target="_blank">https://doi.org/10.1080/00207543.2016.1213447</a> [SCI, IF = 2.325]</li>
+      <li>Li, D.-C., et al. (2016). Using a diffusion wavelet neural network for short-term time series learning in the wafer level chip scale package process. <em>Journal of Intelligent Manufacturing</em>, 27(6), 1261–1272. <a href="https://doi.org/10.1007/s10845-014-0949-9" target="_blank">https://doi.org/10.1007/s10845-014-0949-9</a> [SCI, IF = 3.035]</li>
+      <li>Chang, C.-J., et al. (2015). A novel procedure for multimodel development using the grey silhouette coefficient. <em>Journal of the Operational Research Society</em>, 66(11), 1887–1894. <a href="https://doi.org/10.1057/jors.2015.17" target="_blank">https://doi.org/10.1057/jors.2015.17</a> [SCI, IF = 1.225]</li>
+      <li>Li, D.-C., et al. (2015). Practical information diffusion techniques to accelerate new product pilot runs. <em>International Journal of Production Research</em>, 53(17), 5310–5319. <a href="https://doi.org/10.1080/00207543.2015.1032437" target="_blank">https://doi.org/10.1080/00207543.2015.1032437</a> [SCI, IF = 2.325]</li>
+      <li>Chang, C.-J., et al. (2015). A novel gray forecasting model based on the box plot for small manufacturing data sets. <em>Applied Mathematics and Computation</em>, 265, 400–408. <a href="https://doi.org/10.1016/j.amc.2015.05.006" target="_blank">https://doi.org/10.1016/j.amc.2015.05.006</a> [SCI, IF = 1.738]</li>
+      <li>Li, D.-C., et al. (2014). Employing box plots to build high-dimensional manufacturing models for new products in TFT-LCD plants. <em>Neurocomputing</em>, 142, 73–85. <a href="https://doi.org/10.1016/j.neucom.2014.03.043" target="_blank">https://doi.org/10.1016/j.neucom.2014.03.043</a> [SCI, IF = 3.317]</li>
+      <li>Chang, C.-J., et al. (2014). A latent information function to extend domain attributes to improve the accuracy of small-data-set forecasting. <em>Neurocomputing</em>, 129, 343–349. <a href="https://doi.org/10.1016/j.neucom.2013.09.024" target="_blank">https://doi.org/10.1016/j.neucom.2013.09.024</a> [SCI, IF = 3.317]</li>
+      <li>Chang, C.-J., et al. (2014). A forecasting model for small non-equigap data sets considering data weights and occurrence possibilities. <em>Computers &amp; Industrial Engineering</em>, 67(1), 139–145. <a href="https://doi.org/10.1016/j.cie.2013.11.002" target="_blank">https://doi.org/10.1016/j.cie.2013.11.002</a> [SCI, IF = 2.623]</li>
+      <li>Chang, C.-J., et al. (2013). A grey-based rolling procedure for short-term forecasting using limited time series data. <em>Economic Computation and Economic Cybernetics Studies and Research</em>, 47(3), 75–90. [SCI, SSCI, IF = 0.420]</li>
+      <li>Chang, C.-J., et al. (2013). Utilizing an adaptive grey model for short-term time series forecasting: A case study of wafer-level packaging. <em>Mathematical Problems in Engineering</em>, 2013, Article 526806. <a href="https://doi.org/10.1155/2013/526806" target="_blank">https://doi.org/10.1155/2013/526806</a> [SCI, IF = 1.383]</li>
+      <li>Li, D.-C., et al. (2013). Employing virtual samples to build early high-dimensional manufacturing models. <em>International Journal of Production Research</em>, 51(11), 3206–3224. <a href="https://doi.org/10.1080/00207543.2012.746795" target="_blank">https://doi.org/10.1080/00207543.2012.746795</a> [SCI, IF = 2.325]</li>
+      <li>Li, D.-C., et al. (2012). A grey-based fitting coefficient to build a hybrid forecasting model for small data sets. <em>Applied Mathematical Modelling</em>, 36(10), 5101–5108. <a href="https://doi.org/10.1016/j.apm.2011.12.050" target="_blank">https://doi.org/10.1016/j.apm.2011.12.050</a> [SCI, IF = 2.350]</li>
+      <li>Li, D.-C., et al. (2012). Employing dependent virtual samples to obtain more manufacturing information in pilot runs. <em>International Journal of Production Research</em>, 50(23), 6886–6903. <a href="https://doi.org/10.1080/00207543.2011.631603" target="_blank">https://doi.org/10.1080/00207543.2011.631603</a> [SCI, IF = 2.325]</li>
+      <li>Li, D.-C., et al. (2012). Employing box-and-whisker plots for learning more knowledge in TFT-LCD pilot runs. <em>International Journal of Production Research</em>, 50(6), 1539–1553. <a href="https://doi.org/10.1080/00207543.2011.555430" target="_blank">https://doi.org/10.1080/00207543.2011.555430</a> [SCI, IF = 2.325]</li>
+      <li>Li, D.-C., et al. (2012). A tree-based-trend-diffusion prediction procedure for small sample sets in the early stages of manufacturing systems. <em>Expert Systems with Applications</em>, 39(1), 1575–1581. <a href="https://doi.org/10.1016/j.eswa.2011.08.071" target="_blank">https://doi.org/10.1016/j.eswa.2011.08.071</a> [SCI, IF = 3.928]</li>
+      <li>Li, D.-C., et al. (2012). Forecasting short-term electricity consumption using the adaptive grey-based approach: An Asian case. <em>Omega</em>, 40(6), 767–773. <a href="https://doi.org/10.1016/j.omega.2011.07.007" target="_blank">https://doi.org/10.1016/j.omega.2011.07.007</a> [SCI, SSCI, IF = 4.029]</li>
+      <li>Li, D.-C., et al. (2012). Determining manufacturing parameters to suppress system variance using linear and non-linear models. <em>Expert Systems with Applications</em>, 39(4), 4020–4025. <a href="https://doi.org/10.1016/j.eswa.2011.09.067" target="_blank">https://doi.org/10.1016/j.eswa.2011.09.067</a> [SCI, IF = 3.928]</li>
+      <li>Li, D.-C., et al. (2011). An extended grey forecasting model for omnidirectional forecasting considering data gap difference. <em>Applied Mathematical Modelling</em>, 35(10), 5051–5058. <a href="https://doi.org/10.1016/j.apm.2011.04.006" target="_blank">https://doi.org/10.1016/j.apm.2011.04.006</a> [SCI, IF = 2.326]</li>
+      <li>Li, D.-C., et al. (2010). Using non-equigap grey model for small data set forecasting: A color filter manufacturing example. <em>Journal of Grey System</em>, 22(4), 375–382. [SCI, IF = 0.370]</li>
+      <li>Li, D.-C., et al. (2010). A yield forecast model for pilot products using support vector regression and manufacturing experience. <em>International Journal of Production Research</em>, 48(18), 5481–5496. <a href="https://doi.org/10.1080/00207540903100051" target="_blank">https://doi.org/10.1080/00207540903100051</a> [SCI, IF = 1.033]</li>
+    </ul>
+  </section>
+
+  <!-- 研究計畫 -->
+  <section id="projects">
+    <h2>五、研究計畫及產學實績 Research Projects</h2>
+
+    <h3>A. 一般計畫</h3>
+    <table>
+      <thead><tr><th>主持人角色</th><th>計畫名稱</th><th>期程</th><th>金額（元）</th><th>補助機構</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>共同主持人</td>
+          <td>封裝關鍵製程—晶圓研磨設備效能 AI 異常偵測系統建置</td>
+          <td>112/03/01 ~ 112/09/30</td>
+          <td>1,500,000</td>
+          <td>台灣科技產業園區電機電子工業同業公會</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>B. 國科會計畫</h3>
+    <table>
+      <thead><tr><th>計畫名稱（計畫編號）</th><th>擔任工作</th><th>期程</th><th>狀態</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>後新冠疫情時代之醫療資源配置最佳化 114-2221-E-167-034-MY2</td>
+          <td>計畫主持人</td>
+          <td>2025/08/01 ~ 2027/07/31</td>
+          <td>執行中</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>C. 產學合作計畫（合計 NT$1,220,000）</h3>
+    <table>
+      <thead><tr><th>計畫編號</th><th>計畫名稱</th><th>金額（新臺幣）</th></tr></thead>
+      <tbody>
+        <tr><td>NCUT 24-T-MM-004</td><td>具 AI 餐飲推薦功能的 POS 系統</td><td>300,000</td></tr>
+        <tr><td>NCUT 25-T-MM-003</td><td>基於 AI 的學員成果導向外籍教師課程優化系統</td><td>300,000</td></tr>
+        <tr><td>NCUT 25-T-MM-004</td><td>鋁鑄生產之深度學習與邊緣運算應用</td><td>310,000</td></tr>
+        <tr><td>NCUT 25-T-MM-005</td><td>建材五金生產之深度學習與邊緣運算應用</td><td>310,000</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 獎項 -->
+  <section id="awards">
+    <h2>六、競賽及獎項 Awards &amp; Competitions</h2>
+    <div class="award-box">
+      <strong>2025 智慧創新大賞（佳作）</strong>— 經濟部產業技術司，AI 應用類 / 學生組<br>
+      指導組員：林宸緯、郭芷榕、翁子涵、蕭琇文、范怡文、陳奕羽、胡涵語、姚品毓
+    </div>
+  </section>
+
+  <!-- 指導學生 -->
+  <section id="students">
+    <h2>七、指導學生 Students Supervised</h2>
+
+    <h3>碩士班</h3>
+    <table>
+      <thead><tr><th>畢業年度</th><th>姓名</th><th>論文名稱</th><th>備註</th></tr></thead>
+      <tbody>
+        <tr><td>113</td><td>陳昕佑</td><td>屋頂遮蔽物種類對建築物熱島效應降溫之研究</td><td></td></tr>
+        <tr><td>114</td><td>孫為元</td><td>AGO 驅動的晶圓研磨異常偵測與集成學習框架</td><td></td></tr>
+        <tr><td>114</td><td>林宸緯</td><td>使用手語的人工智慧替代與擴增溝通系統</td><td>共同指導</td></tr>
+        <tr><td>114</td><td>周文豪</td><td>使用模糊條件式生成對抗網路學習小樣本</td><td>共同指導</td></tr>
+      </tbody>
+    </table>
+
+    <h3>大學部專題生</h3>
+    <table>
+      <thead><tr><th>年度</th><th>組員</th><th>專題名稱</th><th>備註</th></tr></thead>
+      <tbody>
+        <tr><td>113</td><td>郭芷榕、郭宜庭、胡涵語、涂淳雅</td><td>晶粒切割製程之人工智慧代理人系統開發</td><td>共同指導</td></tr>
+        <tr><td>113</td><td>姚品毓、范怡文、陳奕羽</td><td>新生兒外接轉診即時協作平台：提升醫療效率與資訊透明度</td><td></td></tr>
+        <tr><td>113</td><td>蕭琇文、陳洧倫、王翊安、葉佳豪</td><td>開發基於箱型圖與計畫評估與查核技術的灰色模型區間預測</td><td></td></tr>
+        <tr><td>114</td><td>曾昊哲、張朔齊、潘致勳、張庭瑋、陳祈勳</td><td>疫情下臨時篩選站選址與非緊急救護運送路徑最佳化研究</td><td></td></tr>
+        <tr><td>114</td><td>楊皓鈞、陳令祥、陳浩宇、許耘嘉、梁永璿</td><td>太平區移動式快篩站配置最佳化</td><td></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 陳建智 Chien-Chih Chen &nbsp;|&nbsp; 國立勤益科技大學 資訊管理系
+</footer>
+
+</body>
+</html>
